@@ -1,0 +1,94 @@
+.texto {
+    background-color: rgb(117, 56, 56);
+    height: 50px;
+    width: 100%;
+    font-family: 'Schoolbell', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.franja {
+    background-color: rgb(232, 232, 15);
+    height: 10px;
+    width: 100%;
+}
+
+.caja {
+    background-color: chocolate;
+    border-top: 10px beige;
+    font-family: 'Schoolbell', cursive;
+    color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 4fr) 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
+.left,
+.right {
+    background-color: #a34747;
+    height: 700%;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 0%;
+    background-color: rgb(251, 183, 183);
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+img {
+    /* max-width: 150%;
+    max-height: 150%;
+    object-fit: contain;
+    */
+    max-width: 100%;
+    height: 100%;
+}
+
+.listaordenada {
+    font-size: 20px;
+    color: antiquewhite;
+    font-family: 'Schoolbell', cursive;
+}
+
+.item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+}
+
+body {
+    background-color: rgb(251, 183, 183);
+}

@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <div class="coment">
+
+    </div>
 </head>
 
 <body>
@@ -19,10 +22,11 @@
     <div class="container">
         <div class="left">
             <li class="listaordenada">
-                <ol> La Rioja </ol>
-                <ol> Mendoza </ol>
-                <ol>San Luis</ol>
-                <ol> San Juan</ol>
+                <ol>
+                    <a href="larioja.html" target="_blank">La Rioja</a> </ol>
+                <ol><a href="mendoza.html" target="_blank">Mendoza</a></ol>
+                <ol><a href="sanjuan.html" target="_blank">San Luis</a></ol>
+                <ol><a href="sanluis.html" target="_blank">San Juan</a></ol>
 
 
             </li>
@@ -52,15 +56,54 @@
             </div>
             <div class="item"><img src="centro.jpg">
                 <p><a href="http://www.instagram.com/" target="_blank">Centro de San Luis</a></p>
+
+
+
             </div>
         </div>
+
         <div class="right"></div>
-    </div>
-
-
 
     </div>
+
+    <div class="comentarios" id="resultado"></div>
+    <form id="my-form">
+        <div class="formu">
+            <label for="nombre">Nombre :</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="comentario">Comentario :</label>
+            <input type="text" id="comentario" name="comentario" value="">
+
+            <input type="submit" value="enviar">
+        </div>
+
+    </form>
+
+
+    <script>
+        const form = document.getElementById("my-form");
+        const resultado = document.getElementById("resultado");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe por defecto
+
+            // Recupera los valores ingresados en los campos del formulario
+            const nombre = form.elements["nombre"].value;
+            const comentario = form.elements["comentario"].value;
+
+            // Muestra los valores en la página
+            resultado.innerHTML = `<p>${nombre}:   ${comentario}</p>`;
+        });
+    </script>
+
+    <div class="final">
+        <div class="franja"></div>
+        <p>esta es la parte inferior</p>
+    </div>
+    <div class="franja"></div>
+
+
+
 
 </body>
-
-</html>

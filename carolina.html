@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/carolina.css" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu7va6ywpsO9cysQN_Z7d9goMR2Xw6Sr8"></script>
+    <title>Document</title>
+</head>
+
+<body onload="initMap()">
+    <div class="franja"></div>
+    <div class="centro">
+        <p>LA CAROLINA, SAN LUIS. EL PUEBLO DE LA MINA DE ORO</p>
+    </div>
+    <div class="franja"></div>
+
+    <div class="carrousel">
+
+        <img src="carolina1.jpg" alt="imagen de carolina">
+        <div id="fotocarrousel"></div>
+        <script>
+            let imagen = document.querySelector('.carrousel img');
+            setInterval(function() {
+                segundos();
+            }, 3000);
+
+            function segundos() {
+                let nuevosrc = imagen.getAttribute('src');
+                if (nuevosrc === 'carolina1.jpg') {
+                    imagen.setAttribute('src', 'carolina2.jpg');
+                } else if (nuevosrc === 'carolina2.jpg') {
+                    imagen.setAttribute('src', 'carolina3.jpg');
+                } else if (nuevosrc === 'carolina3.jpg') {
+                    imagen.setAttribute('src', 'carolina1.jpg');
+                }
+            }
+        </script>
+
+
+
+
+    </div>
+    <div class="texto">
+        <p>Hoy vamos a recorrer, el que para mi, es uno de los pueblitos mas lindos de la Argentina. La Carolina, San Luis. Si, si, este pueblo me encanta! no se si se debe a su construcción en piedra, a su ambiente tranquilo y relajado o a su pasado minero.
+            Pero siempre que puedo vuelvo a visitarlo! Y este viaje a San Luis de 3 días no fue la excepción😊 Pero no soy la única que esta enamorada de éste pueblo, incluso fue nombrado como uno de los «pueblos auténticos» del país, un reconocimiento
+            reservado a los pueblos chicos que cuentan con patrimonio histórico para destacar. A diferencia del pueblo minero que se fundó junto a la mina Los Cóndores, que se encuentra totalmente abandonado, el pueblo minero La Carolina se encuentra
+            muuuy bien conservado y habitado por unas 300 personas. Cómo llegar a La Carolina, San Luis Si venís desde la capital puntana, tenés que tomar la RP9 en dirección al norte y recorrer unos 80km de camino pavimentado. La Carolina se encuentra
+            ubicada al pie del cerro Tomolasta, a más de 1500m de altura. Es una excursión que perfectamente la podés hacer por el día e incluso combinarla con otras visitas por la zona. Así lo hicimos nosotros en este recorrido por el día donde también
+            visitamos la gruta de Inti Huasi y las ruinas de la capilla de Paso del Rey. Es un paseo que super recomiendo!</p>
+    </div>
+    <script>
+        function initMap() {
+            // Crea un objeto mapa y lo muestra en el contenedor con id "map"
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -32.8115,
+                    lng: -66.0943
+                }, // Coordenadas de la ubicación que quieres mostrar
+                zoom: 15 // Nivel de zoom del mapa
+            });
+
+            // Agrega un marcador en la ubicación que quieres mostrar
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: -32.8115,
+                    lng: -66.0943
+                }, // Coordenadas de la ubicación que quieres mostrar
+                map: map,
+                title: 'Ubicación de Provincia La Rioja' // Texto que se muestra al hacer clic en el marcador
+            });
+        }
+    </script>
+    <h1 class="textos">Ubicacion de La Carolina, San Luis</h1>
+    <div id="map">
+
+    </div>
+    <div class="caro"><img src="carolina10.jpg" alt="carolina casas"></div>
+    <div class="salir"><a href="index.html">volver</a></div>
+</body>
+
+</html>

@@ -34,11 +34,14 @@
     height: auto;
 }
 
-.left,
 .right {
     background-color: #a34747;
     height: auto;
     width: auto;
+}
+
+.left {
+    background-color: #a34747;
 }
 
 .grid {
@@ -98,6 +101,7 @@ body {
     align-items: center;
     align-self: center;
     float: inline-start;
+    border: 2px soli;
 }
 
 .final {

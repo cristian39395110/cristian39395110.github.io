@@ -1,0 +1,69 @@
+body {
+    background-color: burlywood;
+}
+
+.franja {
+    width: 100%;
+    height: 10px;
+    background-color: chocolate;
+    margin-bottom: 15px;
+}
+
+.centro p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.centro {
+    background-color: coral;
+    height: 100%;
+}
+
+.carrousel {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    border: 3px coral solid;
+}
+
+.carrousel img {
+    width: 100%;
+    height: 100%;
+}
+
+.texto {
+    display: inline-block;
+    width: 700px;
+    margin-left: 20px;
+    font-size: 17px;
+    vertical-align: top;
+}
+
+#map {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    border: 3px coral solid;
+    margin-right: 25px;
+}
+
+.textos {
+    width: 100%;
+    height: 10px;
+    padding: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
+
+.caro {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    border: 3px coral solid;
+}
+
+.caro img {
+    width: 100%;
+    height: 100%;
+}

@@ -5,11 +5,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styleca.css" rel="stylesheet" type="text/css">
     <title>Document</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu7va6ywpsO9cysQN_Z7d9goMR2Xw6Sr8"></script>
 </head>
 
-<body>
-    <h1>segunada pagina</h1>
+
+
+<body onload="initMap()">
+    <div class="carousel-control-next">
+        <img src="carolina1.jpg" alt="Imagen de Carolina">
+    </div>
+    <div id="carousel"></div>
+
+    <button onclick="prev()">Anterior</button>
+    <button onclick="next()">Siguiente</button>
+    <script>
+        let miImage = document.querySelector('img');
+        setInterval(function() {
+            segundos();
+        }, 3000);
+        // miImage.onclick = function()
+        function segundos() {
+            let miSrc = miImage.getAttribute('src');
+            if (miSrc === 'carolina1.jpg') {
+                miImage.setAttribute('src', 'carolina2.jpg');
+            } else {
+                miImage.setAttribute('src', 'carolina1.jpg');
+            }
+        }
+
+        function initMap() {
+            // Crea un objeto mapa y lo muestra en el contenedor con id "map"
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -29.4131,
+                    lng: -66.8558
+                }, // Coordenadas de la ubicación que quieres mostrar
+                zoom: 15 // Nivel de zoom del mapa
+            });
+
+            // Agrega un marcador en la ubicación que quieres mostrar
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: -29.4131,
+                    lng: -66.8558
+                }, // Coordenadas de la ubicación que quieres mostrar
+                map: map,
+                title: 'Ubicación de Provincia La Rioja' // Texto que se muestra al hacer clic en el marcador
+            });
+        }
+        const images = [
+            'larioja1.jpg',
+            'larioja2.jpg',
+            'larioja3.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        const carousel = document.getElementById('carousel');
+
+        function showImage() {
+            carousel.innerHTML = `<img src="${images[currentIndex]}" />`;
+        }
+
+        function prev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage();
+        }
+
+        function next() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage();
+        }
+
+        showImage();
+    </script>
+    <h1 class="texto">Ubicacion de La carolina provincia de San luis</h1>
+    <div id="map"></div>
 </body>
 
 </html>

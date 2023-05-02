@@ -1,0 +1,52 @@
+.horizontal {
+    height: 30%;
+    padding: 0%;
+    width: auto;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted rgb(148, 205, 34);
+}
+
+.p {
+    font-family: 'Schoolbell', cursive;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
+    height: 100vh;
+}
+
+.izquierda {
+    background-color: coral;
+    width: 100%;
+    height: 100%;
+    margin-top: -6%;
+}
+
+.derecha {
+    background-color: coral;
+    width: 100%;
+    height: 100%;
+    margin-top: -6%;
+}
+
+.centro {
+    background-color: darkgoldenrod;
+    width: 100%;
+    height: 100%;
+    margin-top: -2%;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    max-width: 466.8px;
+    height: 593.67px;
+}

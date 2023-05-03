@@ -115,3 +115,41 @@ body {
     align-self: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+@media only screen and (max-width: 767px) {
+    /* Estilos para pantallas pequeñas */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .item {
+        height: 100%;
+    }
+    .texto {
+        font-size: 20px;
+        height: 40px;
+    }
+    .caja {
+        font-size: 20px;
+    }
+    .listaordenada {
+        font-size: 16px;
+    }
+    .item p {
+        font-size: 12px;
+    }
+    .formu {
+        margin-top: 50px;
+    }
+    .comentarios {
+        margin-top: 20px;
+    }
+    .final {
+        height: 70px;
+        font-size: 16px;
+    }
+}

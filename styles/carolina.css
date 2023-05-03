@@ -67,3 +67,31 @@ body {
     width: 100%;
     height: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: burlywood;
+    }
+    .centro p {
+        font-size: 16px;
+    }
+    .texto {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+    }
+    #map {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .carrousel,
+    .caro {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}

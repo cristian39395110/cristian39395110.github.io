@@ -7,13 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="styles/salto.css" rel="stylesheet" type="text/css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu7va6ywpsO9cysQN_Z7d9goMR2Xw6Sr8"></script>
     <title>Salto de la Moneda</title>
 </head>
 
-<body>
+<body onload="initMap()">
     <div class="contenedor">
-        <p>Esto Es una Parrafo</p><img src="Salto de la Moneda1.JPG" alt="foto del salto de la moneda"></div>
+        <p>Salto De la Moneda</p><img src="Salto de la Moneda1.JPG" alt="foto del salto de la moneda"></div>
 
+    <div id="izquierda">
+
+        <div id="map"></div>
+        <p>En los últimos años la localidad de Potrero de los Funes, cercana a la capital de la provincia de San Luis, ha adquirido una notable importancia en materia de turismo. Su clima benigno, la variada oferta hotelera y gastronómica y particularmente
+            el entorno donde está enclavado hacen que no sólo los sanluiseños sino también los cientos de viajeros que merodean por la región deseen visitar y recorrer este lugar. Decidimos conocer este hermoso valle rodeado por serranías y visitar alguno
+            de los rincones naturales que tanto han contribuido a que hoy Potrero de los Funes sea considerada una auténtica villa turística</p>
+    </div>
+    <div id="centro">
+        <h1>Fuente De Los Deseos</h1>
+        <p>En los últimos años la localidad de Potrero de los Funes, cercana a la capital de la provincia de San Luis, ha adquirido una notable importancia en materia de turismo. Su clima benigno, la variada oferta hotelera y gastronómica y particularmente
+            el entorno donde está enclavado hacen que no sólo los sanluiseños sino también los cientos de viajeros que merodean por la región deseen visitar y recorrer este lugar. Decidimos conocer este hermoso valle rodeado por serranías y visitar alguno
+            de los rincones naturales que tanto han contribuido a que hoy Potrero de los Funes sea considerada una auténtica villa turística. Para cumplir con nuestro cometido responsablemente nos pusimos en contacto con la gente de Pilpintus, que ofrece
+            su servicio de guías en la región. Sabiamente han desarrollado distintas actividades por la localidad que implican recorrerla a pie, andar en bicicleta por circuitos de montaña, cabalgatas y, para los más intrépidos, escalada o rappel.</p>
+        La caída de agua, de unos 12 metros de altura, parecía desplomarse en cámara lenta. La cascada transparente descendía estrepitosamente a un pozón de unos 5 metros de profundidad. Al hacerlo provocaba una suave espuma color blanco, que con los segundos
+        tendía a desaparecer. Todo esto, en medio de un extraordinario paisaje, enmarcado por helechos y plantas que colgaban de la pendiente donde nacía el salto de la Moneda. Nuestra guía nos explicó que el nombre del salto se debe al efecto que generan
+        los rayos del sol que se cuelan por la profunda olla de agua hasta el fondo. La luz hace que brillen las rocas que poseen un alto contenido de mica y generen la impresión de que el lugar se encuentra colmado de monedas plateadas. Atónitos observábamos
+        el tesoro que nos regalaba la naturaleza y una extraña sensación, difícil de describir, se apoderó de nosotros. Por un momento sentí lo insignificantes que somos frente a este tipo de manifestaciones naturales en que todo en perfecta armonía complota
+        para que aquel lugar perdido en las sierras sanluiseñas sea perfecto y único.
+    </div>
+
+    <div id="derecha">
+        <div class="imagen">
+            <img src="salto10.jpg" alt="">
+            <img src="salto20.jpg" alt="">
+            <img src="salto30.jpg" alt="">
+        </div>
+
+        <a href="index.html">volver</a>
+    </div>
+
+
+    </div>
+    <script>
+        function initMap() {
+            // Crea un objeto mapa y lo muestra en el contenedor con id "map"
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -33.20147,
+                    lng: -66.23068
+                }, // Coordenadas de la ubicación que quieres mostrar
+                zoom: 15 // Nivel de zoom del mapa
+            });
+
+            // Agrega un marcador en la ubicación que quieres mostrar
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: -33.20147,
+                    lng: -66.2308
+                }, // Coordenadas de la ubicación que quieres mostrar
+                map: map,
+                title: 'Ubicación de Provincia La Rioja' // Texto que se muestra al hacer clic en el marcador
+            });
+        }
+    </script>
 </body>
 
 </html>

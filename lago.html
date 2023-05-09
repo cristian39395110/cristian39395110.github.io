@@ -5,11 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/lago.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>en proceso</h1>
+    <div class="titulo">
+        <h1>Lago Piscuyaco</h1>
+    </div>
+    <div class="text">
+        <p>
+            Cosas a tener en cuenta para viajar al dique Piscu Yaco 1. Dónde queda. El gobierno de la provincia inauguró el dique a fines de 2010, siendo el primero en el área de las Sierras de los Comechingones. Recibe sus aguas del arroyo La sepultura y ocupa 17
+            hectáreas. Está al sur del municipio de Cortaderas, localidad situada cinco kilómetros al norte. En la misma dirección, pero a 25 km se encuentra la Villa de Merlo. 2. Cómo llegar. En auto, tanto desde el norte como desde el sur, hay que conducir
+            por la ruta provincial 1 hasta el kilómetro 25,5. Desde allí un camino asfaltado de dos kilómetros lleva hasta el dique. También hay servicios de micros que parten desde Cortaderas y que recorren la ruta provincial 1. El acceso al dique es
+            libre, salvo cuando se realizan eventos.3. Dónde alojarse. Piscu Yaco no cuenta con servicio de alojamiento, pero la cercanía con Cortaderas convierte a esta localidad en el sitio ideal para quedarse. Además del hotel Villa Elena, allí hay
+            una docena de complejos con cabañas y departamentos totalmente equipados. Villa Larca, a 7,5 km del dique, también cuenta con cabañas. Otra opción, por supuesto, es Villa de Merlo. 4. Actividades. Una playa de arena, que se extiende por 100
+            metros, es el lugar elegido para pasar el día. Cuenta con una decena de sombrillas de paja, cinco quinchos y lugar para otra decena de puestos comerciales. A la hora de ingresar al agua, tener en cuenta que solo está permitido nadar en el
+            área demarcada con boyas. No están permitidas la pesca ni las embarcaciones a motor. La costa invita a relajadas caminatas y a tomar fotografías para llevarse de recuerdo la tranquilidad y la belleza natural del lugar. Los amantes de la historia
+            pronto sabrán que, en estos lares, en 1551, los conquistadores españoles prácticamente diezmaron a los comechingones. 5. Arroyo Cortaderas. Cerca de Villa Elena, ubicada frente a Cortaderas, sobre la ruta 1, hacia el este, una reserva natural
+            marca el ingreso del camino que lleva hasta este arroyo. Nace en las Sierras y conduce sus aguas por un lecho de piedras rosadas (formadas por granito rojo dragón) interrumpido por algunos saltos y cascadas. 6. Cascada Esmeralda o Chorro Chico.
+            Con un poco más de esfuerzo, 90 minutos de caminata sobre la costa del arroyo Cortaderas, el visitante puede llegar al sitio donde el agua cae desde nueve metros de altura sobre una hoya de cuatro metros de profundidad, a 1300 m de altura.
+            Siempre por la quebrada de Villa Elena también se encuentra el Salto Grande, o Chorro Grande, una cascada de 70 m, rodeada de bosque. 7. Dique Parrilla. Siempre sobre el arroyo Cortaderas, esta obra hidráulica, a 1100m de altura, desvía el
+            agua hacia unas rejillas y a un canal que desemboca sobre un talud de piedra. Este hace que el agua caiga sobre una olla de dos metros de profundidad, ideal para un baño refrescante. También es un excelente punto panorámico, para contemplar
+            las Sierras. Llegar hasta allí implica una caminata de aproximadamente media hora.
+        </p>
+    </div>
+    <div class="contenedor">
+        <img id="imagen" src="lago10.jpg">
+
+    </div>
+    <div class="cajaboton">
+        <button id="botonAnterior" onclick="anterior()">Anterior </button>
+        <button id="botonSiguiente" onclick="siguiente()">Siguiente</button>
+    </div>
+
+
+    <div class="franja">
+        <a href="index.html">
+            <p>volver</p>
+        </a>
+    </div>
+
+    <script>
+        let array = ["lago10.jpg", "lago20.jpg", "lago30.jpg"];
+        let contador = 0;
+        let botonAnterior = document.getElementById("botonAnterior");
+        let botonSiguiente = document.getElementById("botonSiguiente");
+        let imagen = document.getElementById("imagen");
+
+        function anterior() {
+            if (contador == 0) {
+                contador = array.length - 1;
+            } else {
+                contador--;
+            }
+            imagen.src = array[contador];
+        }
+
+        function siguiente() {
+            if (contador == array.length - 1) {
+                contador = 0;
+            } else {
+                contador++;
+            }
+            imagen.src = array[contador];
+        }
+
+        botonAnterior.addEventListener("click", anterior);
+        botonSiguiente.addEventListener("click", siguiente);
+    </script>
+
 </body>
 
 </html>

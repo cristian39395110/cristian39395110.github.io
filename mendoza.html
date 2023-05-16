@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/mendoza.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="mendoza50p.jpg" alt="">
+        <h1>Termas De Cacheuta</h1>
+    </div>
+    <div class="clase">
+        <img id="imagen" src="mendoza20.jpg" alt="">
+        <p>Cacheuta es una localidad situada en el sector septentrional del departamento Luján de Cuyo, provincia de Mendoza, Argentina. Se encuentra en el límite entre los departamentos de Luján de Cuyo y Las Heras, al oeste de la provincia. Se ubica a
+            orillas del río Mendoza, a 1245 m sobre el nivel del mar. Su principal actividad es el turismo, por estar sobre una fuente de aguas termales.</p>
+    </div>
+    <script>
+        let img = document.getElementById("imagen");
+        setInterval(function() {
+            segundos();
+        }, 5000);
+
+        function segundos() {
+            if (img.src.endsWith("mendoza10.jpg")) {
+                img.src = "mendoza20.jpg";
+            } else if (img.src.endsWith("mendoza20.jpg")) {
+                img.src = "mendoza30.jpg";
+            } else if (img.src.endsWith("mendoza30.jpg")) {
+                img.src = "mendoza40.jpg";
+            } else if (img.src.endsWith("mendoza40.jpg")) {
+                img.src = "mendoza10.jpg";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

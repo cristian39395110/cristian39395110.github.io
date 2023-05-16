@@ -1,0 +1,71 @@
+body {
+    background-color: coral;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#rioja {
+    margin-left: 130px;
+    width: 80%;
+    height: 800px;
+}
+
+img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    width: 90%;
+    height: 900px;
+}
+
+.cuadro h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.cuadro {
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 20px;
+    border: 2px #333 solid;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cuadro p {
+    padding-left: 10px;
+    padding-right: 10px;
+}

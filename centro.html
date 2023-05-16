@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/centro.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="franja1"></div>
+    <div class="franja"></div>
+    <h1>Centro De San Luis</h1>
+    <div class="franja"></div>
+    <div class="franja1"></div>
+
+
+    <img id="imag" src="centro10.jpg" alt="centro">
+
+    <button id="banterior" onclick="anterior()">Anterior</button>
+    <button id="bsiguiente" onclick="siguiente()">Siguiente</button>
+
+    <script>
+        let array = ["centro10.jpg", "centro40.jpg", "centro50.jpg"];
+        /* let sig = document.getElementById(bsiguiente);
+         let ant = document.getElementById(banterior);*/
+        let im = document.getElementById(imag);
+        let cont = 0;
+
+        function anterior() {
+            if (cont == 0) {
+                cont = 2;
+
+            } else {
+                cont--;
+            }
+            imag.src = array[cont];
+
+        }
+
+        function siguiente() {
+
+
+            if (cont == 2) {
+                cont = 0;
+            } else {
+                cont++;
+            }
+            imag.src = array[cont];
+
+        }
+    </script>
+    <h1>Ubicacion</h1>
+    <p>La ciudad de San Luis es la capital de la provincia de San Luis, Argentina. Está ubicada al centro-norte de la provincia y es cabecera del departamento Juan Martín de Pueyrredón. Es uno de los principales centros industriales de Argentina. En sus
+        cercanías se encuentran pintorescos paisajes como el Embalse Potrero de los Funes, Salinas del Bebedero, Balde, la Villa de Merlo y Villa Mercedes.</p>
+    <h1>historia</h1>
+    <p>Aunque se ha perdido el acta de fundación de la ciudad, y con noticias entrecruzadas de la época, redactadas en diversos documentos manejados con poca prudencia, se han detectado errores en el proceso de fundación de la ciudad, transformándose de
+        este modo en un oasis de leyendas, misterios y cuentos populares, que adoptaron el camino de las repeticiones boca a boca. Sin embargo, más allá del acta desaparecida, aquel proceso de fundación puede ser estudiado y comprendido el día de hoy.
+        Como pasos precursores a la fundación de la ciudad, se menciona un destacamento en Conlara, una ciudad Benavente y un fuerte en el Portezuelo del Chorrillo. Se supone que Luis Jufré de Loaiza y Meneses, teniente corregidor de Cuyo, la fundó el
+        25 de agosto de 1594. Tras ser abandonada, fue refundada dos años después y trasladada debido a que el emplazamiento elegido primeramente, al cual se lo denominaba El Bajo, sufría de inundaciones frecuentes debido a su cercanía con el río. Su
+        denominación en la primera fundación fue la de San Luis de Loyola Nueva Medina de Rioseco. "San Luis" en homenaje a San Luis Rey de Francia, patrono del fundador, "de Loyola" en honor al capitán general de Chile, Don Martín García Oñez de Loyola,
+        quien había ordenado a Jufré fundar la ciudad, "Nueva Medina de Rioseco" por el lugar de nacimiento de los padres de Luis, Juan Jufré y de doña Cándida de Montesa, Medina de Rioseco, municipio ubicado en la provincia de Valladolid, España. Frecuentemente,
+        esta ciudad de San Luis de Loyola fue mencionada con el nombre La Punta o La Ciudad de La Punta, y más de una vez lo común se suele unir con lo oficial, y se habla de Ciudad de La Punta de San Luis de Loyola, siendo esta última la más aceptable.
+        También, y con relación a uno de los nombres con la que fue conocida, se menciona el de "San Luis de la Punta de los Venados Nueva Medina del Río Seco", aludiendo a que en el territorio había gran cantidad de venados de las pampas, por ello es
+        que también el Escudo Provincial refleja sobre un fondo montañoso, dos venados enfrentados</p>
+
+    <div class="salir" onclick="location.href='index.html'">
+        <h1>Salir</h1>
+    </div>
+
+</body>
+
+</html>

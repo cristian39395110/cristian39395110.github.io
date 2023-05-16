@@ -1,0 +1,67 @@
+body {
+    background-color: coral;
+}
+
+h1 {
+    text-align: center;
+    height: 50px;
+    border: 1px solid;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-top: 5px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.franja {
+    width: 100%;
+    height: 10px;
+    background-color: maroon;
+}
+
+.franja1 {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(240, 132, 132);
+}
+
+img {
+    width: 800px;
+    height: 600px;
+    margin-left: 250px;
+    margin-right: 300px;
+}
+
+img:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+#bsiguiente {
+    width: 80px;
+    height: 60px;
+    border-radius: 15px;
+    margin-left: 500px;
+}
+
+#banterior {
+    width: 80px;
+    height: 60px;
+    border-radius: 15px;
+    margin-left: 300px;
+}
+
+
+/*#bsiguiente:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 800px;
+}
+
+#banterior:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 100px;
+}*/
+
+.salir h1:hover {
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px #080707;
+}

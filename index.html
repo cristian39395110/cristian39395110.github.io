@@ -45,7 +45,7 @@
                     <p><a href="quijadas.html" target="_blank">Sierras de las Quijadas</a></p>
                 </div>
                 <div class="item"><img src="ciudad1.jpg">
-                    <p><a href="http://www.instagram.com/" target="_blank">Cabildo Replica</a></p>
+                    <p><a href="cabildo.html" target="_blank">Cabildo Replica</a></p>
                 </div>
                 <div class="item"><img src="carolina2.jpg">
                     <p><a href="carolina.html" target="_blank">Carolina</a></p>
@@ -54,7 +54,7 @@
                     <p><a href="condor.html" target="_blank">Los condores</a></p>
                 </div>
                 <div class="item"><img src="trequinjpg.jpg">
-                    <p><a href="http://www.instagram.com/" target="_blank">Cerro Cruz de Piedra</a></p>
+                    <p><a href="cerro.html" target="_blank">Cerro Cruz de Piedra</a></p>
                 </div>
                 <div class="item"><img src="centro.jpg">
                     <p><a href="http://www.instagram.com/" target="_blank">Centro de San Luis</a></p>
@@ -88,14 +88,23 @@
     <script>
         const form = document.getElementById("my-form");
         const resultado = document.getElementById("resultado");
+        const nombreInput = form.elements["nombre"];
+        const comentarioInput = form.elements["comentario"];
 
         form.addEventListener("submit", function(event) {
             event.preventDefault();
             const nombre = form.elements["nombre"].value;
             const comentario = form.elements["comentario"].value;
+            if (nombre == "" && comentario == "") {
+                nombreInput.style.border = "2px solid red";
+                comentarioInput.style.border = "2px solid red";
 
 
-            resultado.insertAdjacentHTML('beforeend', `<p>${nombre}:   ${comentario}</p>`);
+            } else {
+                resultado.insertAdjacentHTML('beforeend', `<p>${nombre}:   ${comentario}</p>`);
+            }
+
+
 
         });
     </script>

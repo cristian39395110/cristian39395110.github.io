@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cabildo.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Replica Del Cabildo </h1>
+    </div>
+    <div class="demo">
+        <img id="imagen" src="cabildo10.jpg">
+    </div>
+    <button id="banterior" onclick="anterior()">Anterior</button>
+    <button id="bsiguiente" onclick="siguiente()">Siguiente</button>
+
+
+    <script>
+        let array = ["cabildo10.jpg", "cabildo20.jpg", "cabildo30.jpg"];
+        let cont = 0;
+        let sig = document.getElementById(bsiguienete);
+        let ant = document.getElementById(banterior);
+        let imag = document.getElementById(imagen);
+
+        function siguiente() {
+
+
+            if (cont == 2) {
+                cont = 0;
+            } else {
+                cont++;
+            }
+            imagen.src = array[cont];
+
+        }
+
+        function anterior() {
+            if (cont == 0) {
+                cont = 2;
+
+            } else {
+                cont--;
+
+            }
+            imagen.src = array[cont];
+
+
+        }
+    </script>
+
+    <p>En conmemoración del Bicentenario, San Luis, primera provincia como ciudad Cabildo en adherirse al movimiento Revolucionario, construyó en La Punta, ciudad fundada en el Siglo XXI, la réplica exacta del Cabildo Histórico, símbolo por excelencia de
+        la Revolución de Mayo de 1810. Está destinado a actividades recreativas, turísticas, culturales, pedagógicas y de interés histórico. La réplica incluye la Plaza de Mayo, que en la época de la Colonia estaba dividida en dos sectores: La Plaza de
+        la Victoria y la del Mercadéo. Además la réplica de la Pirámide de Mayo, del primer aniversario del 25 de mayo, en 1811. Detalles de la obra Superficie: 2.008 m2, distribuidos en: planta baja y alta con recovas (balconada con estrucutura de madera
+        hierro y bobedillas), torre con reloj y campana, un eje central y alas perpendiculares. La Réplica del Histórico Cabildo de 1810, de arquitectura colonial está hecho con ladri-llos Palmar, con sistema anti-incendio. El tipo de construcción será
+        mixta, respetando bóvedas y el espesor de los muros. La Carpintería de obra, puertas y postigones de cedro rosado maciso, pulidas y lustradas , y marcos de madera de quina . Todo hecho en una carpinteria en Jujuy y el lustre, colocación y terminación
+        se hizo en San Luis por la carpintería Zambrano. La herrería y rejas son de hierro fundido, forjado y martillado fiel a los originales trabajados artesanalmente. Los muebles replica del original, fueron realizados por los carpinteros Navarros
+        y los detalles del ebanista Licciardi, tapisados en brocato y pana. Sobre el cortinado con faldon superior, se ubica el cuadro que representa al escudo de armas de Fernando II. La iluminacion interior, esta basada en apliques de pared y araña
+        de 18 velas fieles al estilo de la época, realizados en aliacion de bronce fabricados especialemente para la obra por Enviarla .firma de plateros Pallarols. Las farolas de la recova, de hierro fundido con artefacto en forma de velas, fueron realizadas
+        en San Luis. Completan el estilo colonial las tejas de españolas y el piso de ceramico rústico color rojo. La campana fue realizada por la única fábrica de campanas de Latinoamérica, ubicada en San Carlos, Santa Fe. La empresa “Luis Bellini” fue
+        creada en 1892. Pesa 150 kg. De aleación de 80% de cobre y 20% de estaño. El tamaño no es arbitrario, sino que fue realizada por catálogo ya que responde a una secuencia de notas musicales. El reloj es replica al de la epoca, de 1,20 mts de diametro
+        y cuadrante translucido El aljibe del patio trasero es de marmol con brocal de hierro, réplica del aljibe donado por D. Manuel Belgrano al Cabildo de Buenos Aires.</p>
+
+    <div class="salir"><a href="index.html">Salir</a></div>
+
+</body>
+
+
+</html>

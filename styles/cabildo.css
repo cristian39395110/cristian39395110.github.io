@@ -1,0 +1,60 @@
+        body {
+            background-color: black;
+        }
+        
+        .titulo h1 {
+            background-color: rgb(121, 70, 70);
+            color: aliceblue;
+            text-align: center;
+            font-size: 50px;
+            border-radius: 15px;
+            border: 3px rgb(255, 0, 0) solid;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        img {
+            margin-top: 40px;
+            width: 90%;
+            height: 800px;
+            border-radius: 30px;
+            border: 3px rgb(255, 0, 0) solid;
+            margin-left: 50px;
+        }
+        
+        #banterior {
+            margin-left: 200px;
+        }
+        
+        #bsiguiente {
+            margin-left: 700px;
+        }
+        
+        p {
+            margin-left: 50px;
+            color: aliceblue;
+            margin-right: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .salir {
+            margin-top: 30px;
+            background-color: rgb(121, 70, 70);
+            color: aliceblue;
+            text-align: center;
+            border-radius: 15px;
+            border: 3px rgb(255, 0, 0) solid;
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 50px;
+        }
+        
+        .salir a {
+            position: absolute;
+            text-align: center;
+            margin-top: 15px;
+            color: aliceblue;
+            border: 3px red solid;
+            width: 50px;
+            border-radius: 15px;
+        }

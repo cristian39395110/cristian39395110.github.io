@@ -16,9 +16,94 @@
         <p>E-mail:cristian_villalobos2004@hotmail.com</p>
         <p>Telefono :+542664840533 </p>
     </div>
+
+    <form id="Form" onsubmit="return validar()">
+        <div>
+            <h2 class="titulo">Formulario</h2>
+
+            <input class="hol" type="text" id="nombre" placeholder="Nombre">
+        </div>
+        <div>
+
+            <textarea class="hol" id="mensaje" maxlength="200" placeholder="Mensaje"></textarea>
+        </div>
+        <div>
+
+            <input class="hol" type="email" id="email" placeholder="Email">
+        </div>
+        <button class="hol" type="submit">Enviar</button>
+        <div id="aca"></div>
+        <ul id="concatenado"></ul>
+
+    </form>
     <div class="volver" onclick="location.href='index.html'">
         <p>volver</p>
     </div>
+    <script>
+        function validar() {
+            let n_nombre = document.getElementById("nombre");
+            let m_mensaje = document.getElementById("mensaje");
+            let e_mail = document.getElementById("email");
+            let a_aca = document.getElementById("aca");
+            let c_concatenado = document.getElementById("concatenado");
+            let reg_correo = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+            let errores = [];
+
+            if (n_nombre.value == "") {
+                errores.push("El nombre no puede estar vacio");
+
+            }
+
+            if (m_mensaje.value.length <= 4) {
+                errores.push("El mensaje debe tener al menos 5 caracteres");
+
+
+            }
+            if (e_mail.value.trim() == "" || !reg_correo.test(e_mail.value)) {
+                errores.push("E-mail inválido");
+            }
+
+            if (errores.length > 0) {
+
+                for (let i = 0; i < errores.length; i++) {
+                    let p = document.createElement("p");
+                    p.innerHTML = errores[i];
+                    a_aca.appendChild(p);
+
+                }
+
+                return false;
+
+
+            }
+
+
+            a_aca.innerHTML = "";
+            let p = document.createElement("p")
+            p.innerHTML = n_nombre.value + " Dice " + m_mensaje.value + ".  Contacto: " + e_mail.value;
+            c_concatenado.appendChild(p);
+            limpiar();
+            return false;
+
+
+
+
+
+        }
+
+        function limpiar() {
+            let n_nombres = document.getElementById("nombre");
+            let m_mensajes = document.getElementById("mensaje");
+            let e_mails = document.getElementById("email");
+            n_nombres.value = "";
+            m_mensajes.value = "";
+            e_mails.value = "";
+            n_nombres.focus;
+            return true;
+
+
+        }
+    </script>
 </body>
 
 </html>

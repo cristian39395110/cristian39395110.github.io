@@ -63,26 +63,10 @@
 
                 </div>
             </div>
-            <div id="mensajes"></div>
-            <form id="Formulario" onsubmit="return validar()">
-                <div class="formu">
-                    <div>
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" required>
-                    </div>
-                    <div>
-                        <label id="mens" for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" required maxlength="200"></textarea>
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email">
-                    </div>
-                    <button id="enviar" type="submit">Enviar</button>
-                </div>
-            </form>
 
 
+
+            <h1 class="ab"><a href="contacto.html">Contacto</a></h1>
         </div>
         <div class="right"></div>
 
@@ -91,97 +75,7 @@
 
 
 
-    <script>
-        function validar() {
-            var nombreInput = document.getElementById("nombre");
-            var mensajeInput = document.getElementById("mensaje");
-            var emailInput = document.getElementById("email");
 
-            var errores = [];
-
-            if (!nombreInput.value) {
-                errores.push("El nombre es obligatorio");
-                nombreInput.classList.add("error");
-            }
-
-            if (!mensajeInput.value) {
-                errores.push("El mensaje es obligatorio");
-                mensajeInput.classList.add("error");
-            } else if (mensajeInput.value.length > 200) {
-                errores.push("El mensaje no puede tener más de 200 caracteres");
-                mensajeInput.classList.add("error");
-            }
-
-            if (emailInput.value && !validarEmail(emailInput.value)) {
-                errores.push("El email ingresado no es válido");
-                emailInput.classList.add("error");
-            }
-
-            if (errores.length > 0) {
-                mostrarErrores(errores);
-                return false;
-            }
-
-            var nombre = nombreInput.value;
-            var mensaje = mensajeInput.value;
-            var email = emailInput.value;
-
-            agregarMensaje(nombre, mensaje, email);
-            limpiarFormulario();
-            nombreInput.focus();
-
-            return false;
-        }
-
-        function validarEmail(email) {
-            var re = /\S+@\S+\.\S+/;
-            return re.test(email);
-        }
-
-        function mostrarErrores(errores) {
-            var erroresContainer = document.getElementById("mensajes");
-            erroresContainer.innerHTML = "";
-
-            errores.forEach(function(error) {
-                var errorElement = document.createElement("li");
-                errorElement.textContent = error;
-                erroresContainer.appendChild(errorElement);
-            });
-        }
-
-        function agregarMensaje(nombre, mensaje, email) {
-            var mensajesContainer = document.getElementById("mensajes");
-
-            /*var mensajeElement = document.createElement("li");*/
-            var mensajeElement = document.createElement("div");
-            if (email) {
-                mensajeElement.textContent = nombre + " dice " + mensaje + ". Contacto: " + email + ".";
-            } else {
-                mensajeElement.textContent = nombre + " dice " + mensaje + ".";
-            }
-
-            mensajesContainer.appendChild(mensajeElement);
-        }
-
-        function limpiarFormulario() {
-            var nombreInput = document.getElementById("nombre");
-            var mensajeInput = document.getElementById("mensaje");
-            var emailInput = document.getElementById("email");
-
-            nombreInput.value = "";
-            mensajeInput.value = "";
-            emailInput.value = "";
-
-            nombreInput.classList.remove("error");
-            mensajeInput.classList.remove("error");
-            emailInput.classList.remove("error");
-        }
-
-        window.onload = function() {
-            var nombreInput = document.getElementById("nombre");
-            nombreInput.focus();
-        };
-    </script>
 
     <div class="final">
         <div class="franja"></div>

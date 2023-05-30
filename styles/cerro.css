@@ -89,3 +89,35 @@
         padding-top: 20px;
         color: maroon;
     }
+    
+    #Form {
+        display: block;
+        background-color: rgb(185, 206, 206);
+        width: 30%;
+        height: 80%;
+        margin-left: 500px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px 10px black;
+    }
+    
+    .titulo {
+        margin-left: 120px;
+    }
+    
+    .hol {
+        display: block;
+        margin-left: 120px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10;
+    }
+    
+    #aca {
+        color: red;
+        text-align: center;
+        font-size: 1px;
+    }
+    
+    #concatenado {
+        text-align: center;
+    }
